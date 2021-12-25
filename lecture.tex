@@ -1,0 +1,94 @@
+\documentclass{beamer}
+\usetheme{Frankfurt}
+
+\title{Developing an Autonomous Vehicle}
+\subtitle{A Use-Case in Software Engineering}
+\author{Dr. Michael Aeberhard}
+\institute{Apex.AI}
+\date{February 7, 2021}
+\logo{\includegraphics[height=0.5cm]{images/tum.png}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Introduction}
+
+\begin{frame}[t]
+\frametitle{About Me}
+\begin{columns}[T]
+    \begin{column}{.80\textwidth}
+    \begin{itemize}
+        \item Georgia Institue of Technology (2002-2009)
+        \item Daimler AG (2009)
+        \item BMW Group Research and Technology (2010-2012)
+        \begin{itemize}
+            \item PhD candidate, TU Dortmund
+            \item Thesis: \href{https://eldorado.tu-dortmund.de/handle/2003/36011}{Object-level fusion for surround environment perception in automated driving applications}
+        \end{itemize}
+        \item BMW AG (2012-2018)
+        \item Autonomus Intelligent Driving GmbH (2018-2020)
+        \item Apex.AI (2020-)
+    \end{itemize}
+    \end{column}
+    \begin{column}{.20\textwidth}
+    \centering
+    \includegraphics[height=2.0cm]{images/michael-aeberhard-profile.jpg} \\
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Software Challenge}
+Describe that automotive industry is more software these days
+Many ECUs, many developers, high safety, etc.
+\end{frame}
+
+\begin{frame}
+\frametitle{History of Autonomous Vehicles Development}
+Prometheus, DARPA, ADAS, the 2010s
+\end{frame}
+
+\section{Architecture}
+
+\begin{frame}
+\frametitle{Architecture}
+Describe Functional, Software, and Hardware architecture
+\end{frame}
+
+\subsection{Functional Architecture}
+
+\begin{frame}
+\frametitle{Functional Architecture}
+Talk about the main subsystems and components, e.g. sensor processing pipelines,
+sensor fusion, localization, prediction, planning, control
+\end{frame}
+
+\subsection{Software Architecture}
+
+\begin{frame}
+\frametitle{Software Architecture}
+Talk about how functional components are implemented into software:
+AUTOSAR, ROS, etc.
+\end{frame}
+
+\subsection{Hardware Architecture}
+
+\begin{frame}
+\frametitle{Hardware Architecture}
+Talk about generations of ECU architectures
+\end{frame}
+
+\section{Implementation}
+
+\begin{frame}
+\frametitle{Continuous Integration / Deployment}
+Talk about CI, e.g. what happens from commit to deployment
+\end{frame}
+
+\begin{frame}
+\frametitle{Standards}
+Talk about standards, e.g. ISO 26262, cybersecurity AUTOSAR C++ 14, MISRA, etc.
+\end{frame}
+
+\end{document}
