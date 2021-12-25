@@ -10,3 +10,7 @@ jobs:
         uses: dante-ev/latex-action@latest
         with:
           root_file: lecture.tex
+      - uses: actions/upload-artifact@v2
+        with:
+          name: output-pdf
+          path: lecture.pdf
