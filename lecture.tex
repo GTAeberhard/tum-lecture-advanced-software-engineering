@@ -1,6 +1,8 @@
 \documentclass{beamer}
 \usetheme{Frankfurt}
 \usepackage[style=ieee,maxbibnames=3,minbibnames=1]{biblatex}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
 
 \addbibresource{lecture.bib}
 \addtobeamertemplate{navigation symbols}{}{%
@@ -22,47 +24,140 @@
 
 \frame{\titlepage}
 
+\section{introduction}
+
 \include{introduction}
 \include{history}
 
 \begin{frame}
 \frametitle{The Software Challenge}
-Describe that automotive industry is more software these days
-Many ECUs, many developers, high safety, etc.
+Modern vehicles are smartphones on wheels and the next generation vehicles
+will automated the driving task.\\
+$\Rightarrow$ Software is taking over the automotive industry
+\vspace{0.25cm}
+\begin{itemize}
+    \item Dozens of ECUs in a modern vehicle
+    \item High-resolution displays for the drive and passenger
+    \item Sensors detect the vehicle's environment
+    \item Actuators automatically control many vehicle functions
+    \item Thousands of software developers from many companies collaborating
+    \item Safety of utmost importance
+\end{itemize}
 \end{frame}
 
-\section{System Architecture}
+\begin{frame}
+\frametitle{The Software Challenge}
+\framesubtitle{Autonomous Driving}
+Show that the translation of input to output is done with software
+\end{frame}
+
+\begin{frame}
+\frametitle{The Phases of Development}
+Autonomous vehicles and ADAS development has traditionally followed three phases
+of development.
+
+\begin{itemize}
+    \item Research: Develop prototypes to understand the use-cases, algorithms,
+        hardware, etc. $\rightarrow$ is the product feasible?
+    \item Pre-development: Iron out the details, requirements, commercial
+        viability, etc. $\rightarrow$ develop a solid blue print for production
+    \item Production: Software and hardware is hardened and optimized for
+        production quality and cost, meeting any required safety, automotive or
+        product standards
+\end{itemize}
+\begin{block}{}
+The autonomous driving industry today is making the transition from
+pre-development to production.
+\end{block}
+\end{frame}
+
+\section{Architecture}
 
 \begin{frame}
 \frametitle{Architecture}
-Describe Functional, Software, and Hardware architecture
+The architecture of a system can be broken down into different levels of
+detail.
+
+TODO: Show as a pyramid or layered picture?
+
+\begin{itemize}
+    \item Functional Architecture: Logical components and sub-systems, along
+        with a high-level definition of interfaces, are identified
+    \item Software Architecture: Implementation of logical components into
+        concrete software components with concrete interface implementations
+    \item Hardware Architecture: Partitioning of the software components onto
+        specific hardware and defining the low-level communication mechanisms
+        of the components
+\end{itemize}
+
+The different phases of development will focus on different levels of
+the architecture and hence specific details of the system.
 \end{frame}
 
-\subsection{Functional Architecture}
-
-\begin{frame}
-\frametitle{Functional Architecture}
-Talk about the main subsystems and components, e.g. sensor processing pipelines,
-sensor fusion, localization, prediction, planning, control
-\end{frame}
-
-\begin{frame}
-\frametitle{Sense - Plan - Act}
-\end{frame}
+\include{functional}
 
 \subsection{Software Architecture}
 
 \begin{frame}
 \frametitle{Software Architecture}
+Show layered architecture, e.g. HW, OS, Middleware, Framework, Apps
+\end{frame}
+
+\begin{frame}
+\frametitle{Software Architecture}
 Talk about how functional components are implemented into software:
 AUTOSAR, ROS, etc.
+
+Talk also about the development tools required to implement a software 
+architecture
+\end{frame}
+
+\begin{frame}
+\frametitle{Prototyping in the ROS Framework}
+Talk about how a prototyping framework like ROS is useful
+\end{frame}
+
+\begin{frame}
+\frametitle{Production Software Frameworks}
+Talk about how what is required to go from prototyping to a production
+software architecture (Apex.OS, AUTOSAR, other --> name the properties
+of such frameworks)
 \end{frame}
 
 \subsection{Hardware Architecture}
 
 \begin{frame}
 \frametitle{Hardware Architecture}
-Talk about generations of ECU architectures
+\framesubtitle{Early prototyping}
+Early research and pre-development phases of development are able to
+implement a working system using off-the-shelf PC-like Hardware
+(e.g. x86 architecture with Linux).
+
+TODO: Show example of such hardware in a prototype vehicle
+\end{frame}
+
+\begin{frame}
+\frametitle{Hardware Architecture}
+\framesubtitle{Early Embedded Hardware}
+Talk about what early embedded hardware looks like, e.g. evaluation boards,
+etc. --> also mentioned starting to go to microcontrollers, if required, or
+RTOS. Give examples with pictures.
+\end{frame}
+
+\begin{frame}
+\frametitle{Hardware Architecture}
+\framesubtitle{Production Hardware}
+Talk about automotive-grade hardware from Tier 1s
+\end{frame}
+
+\begin{frame}
+\frametitle{Hardware Architecture}
+\framesubtitle{Designing for safety and performance}
+Talk about different type of cores required in a final hardware architecture,
+e.g. microcontrollers, safety cores, hardware acceleration, security, etc.
+
+Mentioned that software should abstract all of this away --> but this is a big
+challenger (mentioned what Apex.AI is doing to solve this)
 \end{frame}
 
 \section{Implementation}
