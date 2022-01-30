@@ -229,8 +229,7 @@ class MinimalPublisher : public rclcpp::Node {
     public:
         MinimalPublisher() : Node("minimal_publisher"), count_(0) {
             publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
-            timer_ = this->create_wall_timer(
-            500ms, std::bind(&MinimalPublisher::timer_callback, this));
+            timer_ = this->create_wall_timer(500ms, std::bind(&MinimalPublisher::timer_callback, this));
         }
     private:
         void timer_callback() {
@@ -261,6 +260,8 @@ well as additional tools developed by the community.\\
 Show the CLI, RViz, rqt, rosbag, etc.
 \end{frame}
 
+\subsection{Production Frameworks}
+
 \begin{frame}
 \frametitle{Production Software Frameworks}
 Talk about how what is required to go from prototyping to a production
@@ -275,6 +276,8 @@ of such frameworks)
 \begin{frame}
 \frametitle{AUTOSAR Adaptive}
 \end{frame}
+
+\subsection{Middleware}
 
 \begin{frame}
 \frametitle{Data Transport Middlewares}
@@ -293,18 +296,16 @@ of such frameworks)
 
 \begin{frame}
 \frametitle{Data Transport Middlewares}
-\framesubtitle{SOME/IP}
-\end{frame}
-
-\begin{frame}
-\frametitle{Data Transport Middlewares}
-\framesubtitle{CAN}
+\framesubtitle{Automotive communication buses}
+SOME/IP, CAN, Flexray
 \end{frame}
 
 \begin{frame}
 \frametitle{Data Transport Middlewares}
 \framesubtitle{MQTT}
 \end{frame}
+
+\subsection{Operating Systems}
 
 \begin{frame}
 \frametitle{Operating Systems}

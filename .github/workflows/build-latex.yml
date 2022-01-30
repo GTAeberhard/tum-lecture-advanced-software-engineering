@@ -10,6 +10,8 @@ jobs:
         uses: dante-ev/latex-action@latest
         with:
           root_file: lecture.tex
+          args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode --shell-escape
+          extra_system_packages: python3-pygments
       - uses: actions/upload-artifact@v2
         with:
           name: output-pdf
