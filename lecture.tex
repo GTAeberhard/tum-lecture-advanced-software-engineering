@@ -1,7 +1,9 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 \usetheme{Frankfurt}
 \usepackage[style=ieee,maxbibnames=3,minbibnames=1]{biblatex}
 \usepackage{tikz}
+\usepackage{minted}
+
 \usetikzlibrary{shapes.geometric, arrows}
 
 \addbibresource{lecture.bib}
@@ -24,10 +26,12 @@
 
 \frame{\titlepage}
 
-\section{introduction}
+\section{Introduction}
 
 \include{introduction}
 \include{history}
+
+% SDV, Vehicle OS --> slide about trends (McKinsey report?)
 
 \begin{frame}
 \frametitle{The Software Challenge}
@@ -65,21 +69,18 @@ of development.
         production quality and cost, meeting any required safety, automotive or
         product standards
 \end{itemize}
+\pause
 \begin{block}{}
 The autonomous driving industry today is making the transition from
 pre-development to production.
 \end{block}
 \end{frame}
 
-\section{Architecture}
-
 \begin{frame}
 \frametitle{Architecture}
-The architecture of a system can be broken down into different levels of
-detail.
-
-TODO: Show as a pyramid or layered picture?
-
+The architecture of a system can be broken down into different levels
+of detail.\\
+TODO: Show as a pyramid or layered picture?\\
 \begin{itemize}
     \item Functional Architecture: Logical components and sub-systems, along
         with a high-level definition of interfaces, are identified
@@ -89,78 +90,15 @@ TODO: Show as a pyramid or layered picture?
         specific hardware and defining the low-level communication mechanisms
         of the components
 \end{itemize}
-
 The different phases of development will focus on different levels of
 the architecture and hence specific details of the system.
 \end{frame}
 
-\include{functional}
+\include{architecture_functional}
+\include{architecture_software}
+\include{architecture_hardware}
 
-\subsection{Software Architecture}
-
-\begin{frame}
-\frametitle{Software Architecture}
-Show layered architecture, e.g. HW, OS, Middleware, Framework, Apps
-\end{frame}
-
-\begin{frame}
-\frametitle{Software Architecture}
-Talk about how functional components are implemented into software:
-AUTOSAR, ROS, etc.
-
-Talk also about the development tools required to implement a software 
-architecture
-\end{frame}
-
-\begin{frame}
-\frametitle{Prototyping in the ROS Framework}
-Talk about how a prototyping framework like ROS is useful
-\end{frame}
-
-\begin{frame}
-\frametitle{Production Software Frameworks}
-Talk about how what is required to go from prototyping to a production
-software architecture (Apex.OS, AUTOSAR, other --> name the properties
-of such frameworks)
-\end{frame}
-
-\subsection{Hardware Architecture}
-
-\begin{frame}
-\frametitle{Hardware Architecture}
-\framesubtitle{Early prototyping}
-Early research and pre-development phases of development are able to
-implement a working system using off-the-shelf PC-like Hardware
-(e.g. x86 architecture with Linux).
-
-TODO: Show example of such hardware in a prototype vehicle
-\end{frame}
-
-\begin{frame}
-\frametitle{Hardware Architecture}
-\framesubtitle{Early Embedded Hardware}
-Talk about what early embedded hardware looks like, e.g. evaluation boards,
-etc. --> also mentioned starting to go to microcontrollers, if required, or
-RTOS. Give examples with pictures.
-\end{frame}
-
-\begin{frame}
-\frametitle{Hardware Architecture}
-\framesubtitle{Production Hardware}
-Talk about automotive-grade hardware from Tier 1s
-\end{frame}
-
-\begin{frame}
-\frametitle{Hardware Architecture}
-\framesubtitle{Designing for safety and performance}
-Talk about different type of cores required in a final hardware architecture,
-e.g. microcontrollers, safety cores, hardware acceleration, security, etc.
-
-Mentioned that software should abstract all of this away --> but this is a big
-challenger (mentioned what Apex.AI is doing to solve this)
-\end{frame}
-
-\section{Implementation}
+\section{Software Engineering}
 
 \begin{frame}
 \frametitle{Continuous Integration / Deployment}
@@ -175,6 +113,23 @@ V-Model, Waterfall, Agile, etc.
 \begin{frame}
 \frametitle{Standards}
 Talk about standards, e.g. ISO 26262, cybersecurity AUTOSAR C++ 14, MISRA, etc.
+\end{frame}
+
+\begin{frame}
+\frametitle{Autonomous Vehicle Ecosystem Landscape}
+\begin{columns}[]
+    \begin{column}{0.4\textwidth}
+        \centering
+        \includegraphics[height=0.75\textheight]{images/av_ecosystem_landscape.png}\\
+        \footnotesize{Source: Orsay Consulting\footnotemark[1]}        
+    \end{column}
+    \begin{column}{0.6\textwidth}
+        \begin{itemize}
+            \item aaa
+        \end{itemize}
+    \end{column}
+\end{columns}
+\footnotetext[1]{\tiny{\url{https://www.orsayconsulting.net/mobility-resources-en}}}
 \end{frame}
 
 \begin{frame}[allowframebreaks]{References}
