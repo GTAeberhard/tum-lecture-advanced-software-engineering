@@ -6,7 +6,7 @@
 The implementation of a functional architecture must consider several layers
 of software architecture, where many implementation details affect the
 performance of the system.\\
-\vspace{0.2cm}
+\vspace{0.1cm}
 \begin{tikzpicture}[node distance=1cm,font=\small,
     layer/.style={
         draw=black,
@@ -271,10 +271,35 @@ of such frameworks)
 
 \begin{frame}
 \frametitle{AUTOSAR Classic}
+AUTOSAR was formed in 2003 to standardize automotive E/E architecture.
+Applications can be developed against a standard Runtime Environment
+for automotive \emph{microcontrollers}.
+\begin{center}
+\includegraphics[width=0.75\textwidth]{images/autosar_classic.png}\\
+\footnotesize  Source: AUTOSAR Classic Platform\footnotemark[1]
+\end{center}
+\footnotetext[1]{\tiny{\url{https://www.autosar.org/standards/classic-platform/}}}
 \end{frame}
 
 \begin{frame}
 \frametitle{AUTOSAR Adaptive}
+Next-generation of AUTOSAR designed for high performance computing hardware
+running with a POSIX based operating system. Uses a service oriented
+architecture.
+\begin{center}
+\includegraphics[width=0.7\textwidth]{images/autosar_adaptive.png}\\
+\footnotesize Source: AUTOSAR Classic Platform\footnotemark[1]
+\end{center}
+\footnotetext[1]{\tiny{\url{https://www.autosar.org/standards/adaptive-platform/}}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Apex.OS}
+Apex.OS is a production framework and SDK based on ROS 2.
+\begin{center}
+\includegraphics[width=\textwidth]{images/apex_ros_to_apexos.png}\\
+\scriptsize Source: Apex.AI
+\end{center}
 \end{frame}
 
 \subsection{Middleware}
@@ -282,6 +307,36 @@ of such frameworks)
 \begin{frame}
 \frametitle{Data Transport Middlewares}
 \framesubtitle{Overview}
+A complete vehicle system requires many different mechanism for transporting
+data from one component to another.\\
+\begin{columns}[]
+    \begin{column}{0.6\textwidth}
+        Middleware requirements:
+        \begin{itemize}
+            \item Handle GByte/s data transfer (e.g. camera images)
+            \item Short latencies and low run-time resource consumption
+            \item Many-to-many communication
+            \item Interfacing with diverse set of protocols
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/apex_vehicle_coms.png}\\
+        \scriptsize Source: Apex.AI
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Data Transport Middlewares}
+\framesubtitle{Ethernet}
+Mentioned DDS, SOME/IP, etc.
+\end{frame}
+
+\begin{frame}
+\frametitle{Data Transport Middlewares}
+\framesubtitle{Automotive communication buses}
+CAN, Flexray, LIN
 \end{frame}
 
 \begin{frame}
@@ -291,18 +346,27 @@ of such frameworks)
 
 \begin{frame}
 \frametitle{Data Transport Middlewares}
-\framesubtitle{DDS}
-\end{frame}
-
-\begin{frame}
-\frametitle{Data Transport Middlewares}
-\framesubtitle{Automotive communication buses}
-SOME/IP, CAN, Flexray
-\end{frame}
-
-\begin{frame}
-\frametitle{Data Transport Middlewares}
-\framesubtitle{MQTT}
+\framesubtitle{Apex.Middleware}
+\begin{columns}[]
+    \begin{column}{0.6\textwidth}
+        A single middleware designed to communicate using different protocols
+        in the context of automotive and robotics applications.
+        \begin{itemize}
+            \item Shared memory backbone with Eclipse iceoryx\texttrademark\footnotemark[1]
+            \item Ethernet communication with Eclipse Cyclone DDS\texttrademark\footnotemark[2]
+                and automotive SOME/IP
+            \item Support for PDU communication, e.g. CAN
+            \item MQTT for cloud connectivity
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/apex_middleware.png}\\
+        \scriptsize Source: Apex.AI
+    \end{column}
+\end{columns}
+\footnotetext[1]{\tiny{\url{https://iceoryx.io/}}}
+\footnotetext[2]{\tiny{\url{https://cyclonedds.io/}}}
 \end{frame}
 
 \subsection{Operating Systems}

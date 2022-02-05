@@ -2,26 +2,68 @@
 
 \begin{frame}
 \frametitle{Hardware Architecture}
+The hardware used in an autonomous vehicle project evolves with the different
+stages of development.
+
+\begin{itemize}
+    \item Off-the-shelf hardware (x86 PCs, network switches, etc.) are used
+        in early stages of development in order to focus on the functional
+        software.
+    \item Evaluation boards from chip vendors, or ruggedized version from
+        third parties, are often used in pre-development stages to begin
+        the work of optimizing the software for an embedded environment.
+    \item Production hardware is produced in cooperation with a Tier 1
+        supplier (e.g. Continental, ZF, Bosch, etc.), where several samples
+        (A-sample to D-sample) are produced before the final version is made
+        for start of production (SOP).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hardware Architecture}
 \framesubtitle{Early prototyping}
-Early research and pre-development phases of development are able to
-implement a working system using off-the-shelf PC-like Hardware
-(e.g. x86 architecture with Linux).
-
-TODO: Show example of such hardware in a prototype vehicle
+Example of an early prototype with off-the-shelf hardware, but also prototype
+hardware from automotive vendors (VIGEM, Elektrobit seen here).
+\begin{center}
+\includegraphics[width=0.5\textwidth]{images/bmw_vehicle_trunk.jpg}\\
+\footnotesize Source: BMW\footnotemark[1]
+\end{center}
+\footnotetext[1]{\tiny{\url{https://www.press.bmwgroup.com/global/article/detail/T0320230EN/nextgen-2020}}}
 \end{frame}
 
 \begin{frame}
 \frametitle{Hardware Architecture}
-\framesubtitle{Early Embedded Hardware}
-Talk about what early embedded hardware looks like, e.g. evaluation boards,
-etc. --> also mentioned starting to go to microcontrollers, if required, or
-RTOS. Give examples with pictures.
+\framesubtitle{First embedded hardware}
+Developer kits from chip vendors serve as a good platform for doing an initial
+integration of a system to an embedded environment and optimizing the
+application.
+\begin{center}
+\includegraphics[width=0.6\textwidth]{images/nvidia_drive_agx.jpg}\\
+\footnotesize Source: NVIDIA\footnotemark[1]
+\end{center}    
+\footnotetext[1]{\tiny{\url{https://developer.nvidia.com/drive/drive-agx}}}
 \end{frame}
 
 \begin{frame}
 \frametitle{Hardware Architecture}
-\framesubtitle{Production Hardware}
-Talk about automotive-grade hardware from Tier 1s
+\framesubtitle{Production hardware}
+Tier 1 suppliers develop rugged and automotive grade ECUs for mass production,
+often customized for an OEM's specific requirements.\\
+\vspace{0.2cm}
+\begin{columns}[]
+    \begin{column}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/continental_ecu.jpg}\\
+        \footnotesize Continental ADAS/AD ECU\footnotemark[1]
+    \end{column}
+    \begin{column}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/zf_ecu.jpg}\\
+        \footnotesize ZF ProAI\footnotemark[2]
+    \end{column}
+\end{columns}
+\footnotetext[1]{\tiny{\url{https://press.zf.com/press/en/releases/release_28483.html}}}
+\footnotetext[2]{\tiny{\url{https://www.continental-automotive.com/en-gl/Passenger-Cars/Autonomous-Mobility/Enablers/Control-Units/Assisted-Automated-Driving-Control-Unit}}}
 \end{frame}
 
 \begin{frame}
