@@ -6,13 +6,13 @@ The hardware used in an autonomous vehicle project evolves with the different
 stages of development.
 
 \begin{itemize}
-    \item Off-the-shelf hardware (x86 PCs, network switches, etc.) are used
+    \item \textbf{Research}: Off-the-shelf hardware (x86 PCs, network switches, etc.) are used
         in early stages of development in order to focus on the functional
         software.
-    \item Evaluation boards from chip vendors, or ruggedized version from
+    \item \textbf{Pre-development}: Evaluation boards from chip vendors, or ruggedized version from
         third parties, are often used in pre-development stages to begin
         the work of optimizing the software for an embedded environment.
-    \item Production hardware is produced in cooperation with a Tier 1
+    \item \textbf{Production}: Hardware is produced in cooperation with a Tier 1
         supplier (e.g. Continental, ZF, Bosch, etc.), where several samples
         (A-sample to D-sample) are produced before the final version is made
         for start of production (SOP).
@@ -69,9 +69,17 @@ often customized for an OEM's specific requirements.\\
 \begin{frame}
 \frametitle{Hardware Architecture}
 \framesubtitle{Designing for safety and performance}
-Talk about different type of cores required in a final hardware architecture,
-e.g. microcontrollers, safety cores, hardware acceleration, security, etc.
+A single, modern ECU designed to be a central domain controller for a vehicle
+may contain several different processing units to achieve the overall goals
+of safety and performance.
 
-Mentioned that software should abstract all of this away --> but this is a big
-challenger (mentioned what Apex.AI is doing to solve this)
+\begin{itemize}
+    \item CPUs at the core of the computing, mostly ARM-based architectures
+    \item Hardware accelerators for specific tasks: GPUs, DSPs, NPUs, etc.
+    \item Customized computing: ASICs, FPGAs
+    \item Safety-critical microcontrollers
+    \item SPI, Ethernet, PCI Express, hardware shared memory, etc. for
+        communication between computing cores
+    \item SOCs may combines several types of computing cores onto a single chip
+\end{itemize}
 \end{frame}

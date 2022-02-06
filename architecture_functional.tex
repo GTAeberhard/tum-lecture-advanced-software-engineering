@@ -37,7 +37,7 @@ vehicle architectures.
     \draw [thick,->,>=stealth] (plan) -- (act);
     \draw [thick,->,>=stealth] (act) -- ([xshift=3.5cm]environment.north);
     \draw [thick,<-,>=stealth] (sense) -- ([xshift=-3.5cm]environment.north);
-    \end{tikzpicture}
+\end{tikzpicture}
 \end{center}
 \end{frame}
 
@@ -259,14 +259,30 @@ sense and perceive the environment. \\
 \begin{frame}
 \frametitle{Perception}
 \framesubtitle{Lane / Road Detection}
-
+\begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+        Camera based lane detection is the mainstream method, but difficult
+        to obtain correct 3D projection.
+        \begin{center}
+        \includegraphics[width=0.7\textwidth]{images/lane_detection_vision.png}\\
+        \footnotesize  DNN approach to lane detection in images \cite{Neven2018-om}
+        \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+        Semantic occupancy grid based approaches enable lane/road detection
+        with several sensors directly in the 3D space.
+        \begin{center}
+        \includegraphics[width=0.9\textwidth]{images/thomas_semantic_grids.png}\\
+        \footnotesize Grid-based lane detection \cite{Thomas2021-mi}
+        \end{center}
+    \end{column}
+\end{columns}
 \end{frame}
 
-\begin{frame}
-\frametitle{Perception}
-\framesubtitle{Sensor Data Fusion}
-
-\end{frame}
+% \begin{frame}
+% \frametitle{Perception}
+% \framesubtitle{Sensor Data Fusion}
+% \end{frame}
 
 \subsection{Localization and Planning}
 

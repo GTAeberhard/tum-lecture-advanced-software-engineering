@@ -64,7 +64,13 @@ $\Rightarrow$ Software is taking over the automotive industry
 \begin{frame}
 \frametitle{The Software Challenge}
 \framesubtitle{Autonomous Driving}
-Show that the translation of input to output is done with software
+For an autonomous vehicle system, a very high-dimensional input space from
+environment sensing sensors and vehicle sensors must be translated,
+\textbf{with software}, into steering, brake and motor controls.\\
+\begin{block}{}
+Creating an autonomous driving system is an incredibly complex task that even
+challenges humans.
+\end{block}
 \end{frame}
 
 \begin{frame}
@@ -73,11 +79,11 @@ Autonomous vehicles and ADAS development has traditionally followed three phases
 of development.
 
 \begin{itemize}
-    \item Research: Develop prototypes to understand the use-cases, algorithms,
+    \item \textbf{Research}: Develop prototypes to understand the use-cases, algorithms,
         hardware, etc. $\rightarrow$ is the product feasible?
-    \item Pre-development: Iron out the details, requirements, commercial
+    \item \textbf{Pre-development}: Iron out the details, requirements, commercial
         viability, etc. $\rightarrow$ develop a solid blue print for production
-    \item Production: Software and hardware is hardened and optimized for
+    \item \textbf{Production}: Software and hardware is hardened and optimized for
         production quality and cost, meeting any required safety, automotive or
         product standards
 \end{itemize}
@@ -92,15 +98,15 @@ pre-development to production.
 \frametitle{Architecture}
 The architecture of a system can be broken down into different levels
 of detail.\\
-TODO: Show as a pyramid or layered picture?\\
 \begin{itemize}
-    \item Functional Architecture: Logical components and sub-systems, along
-        with a high-level definition of interfaces, are identified
-    \item Software Architecture: Implementation of logical components into
-        concrete software components with concrete interface implementations
-    \item Hardware Architecture: Partitioning of the software components onto
-        specific hardware and defining the low-level communication mechanisms
-        of the components
+    \item \textbf{Functional Architecture}: Logical components and sub-systems,
+        along with a high-level definition of interfaces, are identified
+    \item \textbf{Software Architecture}: Implementation of logical components
+        into concrete software components with concrete interface
+        implementations
+    \item \textbf{Hardware Architecture}: Partitioning of the software
+        components onto specific hardware and defining the low-level
+        communication mechanisms of the components
 \end{itemize}
 The different phases of development will focus on different levels of
 the architecture and hence specific details of the system.
@@ -111,6 +117,31 @@ the architecture and hence specific details of the system.
 \include{architecture_hardware}
 \include{software_engineering}
 
+\begin{frame}
+\frametitle{How to Get Started on Your Own}
+It is easy to get started with autonomous driving! Check out some of the
+resources below.
+\footnotesize
+\begin{itemize}
+    \item ROS 2 Tutorials: \url{https://docs.ros.org/en/galactic/Tutorials.html}
+    \item Autoware.Auto: \url{https://gitlab.com/autowarefoundation/autoware.auto}
+    \item CARLA Simulator: \url{https://carla.org/}
+    \item Datasets:
+    \begin{itemize}
+        \footnotesize
+        \item NuScenes: \url{https://www.nuscenes.org/}
+        \item Waymo Open Dataset: \url{https://waymo.com/open/}
+        \item KITTI: \url{http://www.cvlibs.net/datasets/kitti/}
+    \end{itemize}
+    \item NVIDIA Jetson Nano: \url{https://developer.nvidia.com/embedded/jetson-nano-developer-kit}
+    \item RC Cars:
+    \begin{itemize}
+        \footnotesize
+        \item F1TENTH RC Car: \url{https://f1tenth.org/}
+        \item TUM RC Car: \url{https://www.mos.ed.tum.de/en/ftm/main-research/intelligent-vehicle-systems/autonomous-rc-cars/}
+    \end{itemize}
+\end{itemize}
+\end{frame}
 
 \begin{frame}[allowframebreaks]{References}
 \renewcommand*{\bibfont}{\normalfont\scriptsize}
