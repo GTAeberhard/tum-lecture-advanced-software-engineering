@@ -196,15 +196,15 @@ TEST(VehicleSpeedChecks, IsVehicleOverSpeedLimit)
 \end{minted}
     \end{column}
 \end{columns}
-\vspace{0.25cm}
-\emph{Example for autonomous vehicles: individual functions from a Kalman filter
-library, e.g. predict(), are tested}
+\begin{exampleblock}{Example for autonomous vehicles}
+Individual functions from a Kalman filter library, e.g. predict(), are tested.
+\end{exampleblock}
 \footnotetext[1]{\tiny{\url{https://github.com/google/googletest}}}
 \end{frame}
 
 \begin{frame}
 \frametitle{Integration Testing}
-Multiple components of a system are tested together.\\
+Multiple components of a system are tested together.
 \begin{itemize}
     \item Black-box testing (implementation details of components are not known)
     \item Tests interfaces and interactions between components
@@ -214,9 +214,10 @@ Multiple components of a system are tested together.\\
     \item In ROS, the launch\_testing\footnotemark[1] framework can be used to
         do integration testing on a system of nodes
 \end{itemize}
-\vspace{0.25cm}
-\emph{Example for autonomous vehicles: A lidar perception pipeline is tested,
-e.g. the components of clustering and tracking are tested together}
+\begin{exampleblock}{Example for autonomous vehicles}
+A lidar perception pipeline is tested, e.g. the components of clustering and
+tracking are tested together.
+\end{exampleblock}
 \footnotetext[1]{\tiny{\url{https://github.com/ros2/launch/tree/master/launch_testing}}}
 \end{frame}
 
@@ -233,13 +234,13 @@ requirements.
     \item Often called \emph{Scenario-based Testing} in the autonomous vehicles
         space
 \end{itemize}
-\vspace{0.25cm}
-\emph{Example for autonomous vehicles: the vehicle behaves correctly when
-approaching a red light}
 \begin{center}
-\includegraphics[width=0.5\textwidth]{images/carla_simulation.png}\\
+\includegraphics[width=0.42\textwidth]{images/carla_simulation.png}\\
 \footnotesize{CARLA open source simulator for autonomous driving \cite{Dosovitskiy17}}
 \end{center}
+\begin{exampleblock}{Example for autonomous vehicles}
+The vehicle behaves correctly when approaching a red light.
+\end{exampleblock}
 \footnotetext[1]{\tiny{\url{https://cucumber.io/}}}
 \end{frame}
 
@@ -261,9 +262,10 @@ approaching a red light}
         \footnotesize{Mcity Test Facility at University of Michigan\footnotemark[1]}
     \end{column}
 \end{columns}
-\vspace{0.25cm}
-\emph{Example for autonomous vehicles: in-vehicle testing with a safety-driver,
-either on the test track or with a fleet on public roads}
+\begin{exampleblock}{Example for autonomous vehicles}
+In-vehicle testing with a safety-driver, either on the test track or with a
+fleet on public roads.
+\end{exampleblock}
 \footnotetext[1]{\tiny{\url{https://mcity.umich.edu/our-work/mcity-test-facility/}}}
 \end{frame}
 
