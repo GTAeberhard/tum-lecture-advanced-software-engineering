@@ -104,37 +104,6 @@ What does CI/CD looks like in practice for an autonomous vehicles?
 \frametitle{Continuous Integration / Deployment}
 \framesubtitle{Pipeline for a fleet of autonomous vehicles}
 \includegraphics[width=\textwidth]{images/autonomous_driving_ci-cd_pipeline.png}
-% \begin{tikzpicture}[node distance=0.25cm,font=\scriptsize,
-%     every node/.style={inner sep=0,outer sep=0},
-%     stage/.style={
-%         draw=black, fill=white,
-%         rounded corners,
-%         minimum width=1cm, minimum height=1.2cm,
-%         text centered, align=center,
-%         inner sep=1mm, outer sep=1mm},
-%     release/.style={
-%         trapezium,
-%         trapezium stretches=true,
-%         trapezium left angle=70,
-%         trapezium right angle=110,
-%         minimum height=1.2cm,
-%         text centered, align=center,
-%         draw=black, fill=white,
-%         inner sep=1mm, outer sep=1mm,
-%         anchor=south}
-%     ]
-%     \node[stage] (build) {Build \&\\Unit Tests};
-%     \node[stage, right=of build] (integration) {Integration\\Tests};
-%     \node[stage, right=of integration] (acceptance_sil) {Acceptance\\Tests};
-%     \node[release, right=of acceptance_sil] (release_candidate) {Release\\Candidate};
-%     \node[stage, right=of release_candidate] (hil_acceptance_test) {Acceptance\\Tests};
-%     \node[stage, above=of hil_acceptance_test] (hil_nonfunc) {Non-Func.\\Tests};
-%     \node[stage, below=of hil_acceptance_test] (hil_integration) {Integration\\Tests};
-%     \node[stage, right=of hil_acceptance_test] (test_track) {Test Track\\Testing};
-%     \node[stage, right=of test_track, yshift=-0.75cm] (shadow) {Shadow\\Testing};
-%     \node[stage, right=of test_track, yshift=0.75cm] (fleet) {Fleet\\Testing};
-%     \node[release, right=of shadow] (deploy) {Deploy};
-% \end{tikzpicture}
 \end{frame}
 
 \begin{frame}
@@ -299,7 +268,6 @@ Methodology for ensuring all written code is thoroughly tested.
             Make the test pass,
             Refactor
         }
-        %{below of module1/TDD}
     \end{column}
 \end{columns}
 \end{frame}
