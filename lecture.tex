@@ -5,6 +5,8 @@
 \usepackage{minted}
 \usepackage{smartdiagram}
 \usesmartdiagramlibrary{additions}
+\usepackage[]{beameraudience}
+\usepackage{svg}
 
 \usetikzlibrary{shapes.geometric, arrows, positioning}
 
@@ -22,6 +24,13 @@
 \subtitle{A Use-Case in Software Engineering}
 \author{Dr. Michael Aeberhard}
 \date{January 30, 2023}
+\addtobeamertemplate{title page}{}{
+    \begin{center}
+        \footnotesize
+        Slide deck available on GitHub:\\
+        \url{https://github.com/GTAeberhard/tum-lecture-advanced-software-engineering}
+    \end{center}
+}
 
 \begin{document}
 
@@ -47,16 +56,16 @@
 
 \begin{frame}
 \frametitle{The Software Challenge}
-Modern vehicles are smartphones on wheels and the next generation vehicles
-will automated the driving task.\\
+Modern vehicles are smartphones on wheels and the next generation of vehicles
+will automate the driving task.\\
 $\Rightarrow$ Software is taking over the automotive industry
 \vspace{0.25cm}
 \begin{itemize}
     \item Dozens of ECUs in a modern vehicle
-    \item High-resolution displays for the drive and passenger
+    \item High-resolution displays for the driver and passenger
     \item Sensors detect the vehicle's environment
     \item Actuators automatically control many vehicle functions
-    \item Thousands of software developers from many companies collaborating
+    \item Thousands of software developers from many companies collaborating in an increasingly complex value chain
     \item Safety of utmost importance
 \end{itemize}
 \end{frame}

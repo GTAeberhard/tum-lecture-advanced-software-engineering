@@ -53,16 +53,16 @@ often customized for an OEM's specific requirements.\\
 \begin{columns}[]
     \begin{column}{0.5\textwidth}
         \centering
-        \includegraphics[width=0.7\textwidth]{images/continental_ecu.jpg}\\
-        \footnotesize Continental ADAS/AD ECU\footnotemark[1]
+        \includegraphics[width=0.7\textwidth]{images/zf_proai_s500l.jpg}\\
+        \footnotesize ZF ProAI S500L\footnotemark[1]
     \end{column}
     \begin{column}{0.5\textwidth}
         \centering
-        \includegraphics[width=0.7\textwidth]{images/zf_ecu.jpg}\\
-        \footnotesize ZF ProAI\footnotemark[2]
+        \includegraphics[width=0.7\textwidth]{images/continental_ecu.jpg}\\
+        \footnotesize Continental ADAS/AD ECU\footnotemark[2]
     \end{column}
 \end{columns}
-\footnotetext[1]{\tiny{\url{https://press.zf.com/press/en/releases/release_28483.html}}}
+\footnotetext[1]{\tiny{\url{https://www.zf.com/products/en/cars/stories/proai.html}}}
 \footnotetext[2]{\tiny{\url{https://www.continental-automotive.com/en-gl/Passenger-Cars/Autonomous-Mobility/Enablers/Control-Units/Assisted-Automated-Driving-Control-Unit}}}
 \end{frame}
 
@@ -82,4 +82,26 @@ of safety and performance.
         communication between computing cores
     \item SOCs may combines several types of computing cores onto a single chip
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hardware Architecture}
+\framesubtitle{Current 4th-Gen architectures and future 5th-Gen architectures}
+\small{Automotive vehicle-wide ECU architectures are evolving and undergoing
+drastic changes. Hardware complexity is being reduced by integrating fewer,
+but more powerful, ECUs.}
+%\vspace{0.1cm}
+\begin{columns}[]
+    \begin{column}{0.6\textwidth}
+        \centering
+        \includegraphics[width=0.65\textwidth]{images/mckinsey_vehicle_architecture_generations.png}\\
+        \tiny Evolution from 3rd Gen to 5th Gen architectures \cite{McKinseyReport}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \centering
+        \includesvg[svgextension=svgz,height=0.55\textheight]{images/mckinsey_hw_architecture_5th_gen_zonal.svgz}\\
+        \tiny{5th Gen Zonal Architecture\footnotemark[1]}
+    \end{column}
+\end{columns}
+\footnotetext[1]{\tiny{\url{https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/rewiring-car-electronics-and-software-architecture-for-the-roaring-2020s}}}
 \end{frame}
