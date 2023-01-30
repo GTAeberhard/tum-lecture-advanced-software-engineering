@@ -14,8 +14,8 @@ of autonomous vehicles.
 ## Compiling the Lecture
 
 The lecture in this repository is created with LaTeX using the [`beamer`](https://ctan.org/pkg/beamer) package.
-To compile the lecture on Ubuntu, be sure to have `texlive` installed on your system. Additionally, the
-[`pygments`](https://pypi.org/project/Pygments/) Python package should be installed so that the
+To compile the lecture on Ubuntu, be sure to have [`texlive`](https://www.tug.org/texlive/) installed on your system.
+Additionally, the [`pygments`](https://pypi.org/project/Pygments/) Python package should be installed so that the
 [`minted`](https://ctan.org/pkg/minted) package is able to compile.
 
 The [`beameraudience`](https://ctan.org/pkg/beameraudience) package is used to skip some slides which provide more
